@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form action="" id="formulario">
+        <label>Escriba aquí su texto:</label>
+        <input type="text" id="textito">
+        <input type="submit" name="" id="" onclick="mostrar()">
+    </form>
+    <!--<p id="parrafo">Esta página ha mostrado un mensaje más completo.</p>-->
+    <script>
+        var funcion = [];
+
+        function ocultar(){
+            document.getElementById('formulario').style.display = 'none';
+        }
+
+        function mostrar() {
+            var texto = document.getElementById("textito").value;
+            funcion = texto;
+            alert(funcion);
+            var msg = "Esta página ha mostrado un mensaje más completo."
+            document.write(msg);
+            
+        }
+    </script>
+</body>
+</html>
