@@ -128,28 +128,24 @@
 
     <!-- EJERCICIO 5-->
 
-    <form action="">
-        <label for="">Ingrese nombre del alumno y nota:</label><br>
-        <textarea name="" id="nombre" cols="30" rows="10"></textarea>
+    <!-- <form action="">
+        <label for="">Ingrese dos números y le diré cual es mayor.</label><br>
+        <input type="number" id="primero"><br><br><input type="number" id="segundo">
         <input type="submit" onclick="mostrarNombre()">
     </form>
     <script>
         function mostrarNombre() {
-            var nombre = document.getElementById("nombre").value;
-            var nota = document.getElementById("nombre").value;
-            var nombrebueno = nombre.replace(/(\d+)/g, "");
-            var nombrebuenobueno = nombrebueno.replace(/[^a-zA-Z ]/g, "");
-            var regex = /(\d+)/g;
-            var notabuena = nota.match(regex);
-
-            document.write("Estudiante: " + nombrebuenobueno + ".");
-            if (notabuena > 4) {
-                document.write("Aprobado");
+            var primero = document.getElementById("primero").value;
+            var segundo = document.getElementById("segundo").value;
+            if (parseInt(primero) > parseInt(segundo)) {
+                document.write(primero + " es mayor que "+ segundo);
+            } else if (parseInt(segundo) > parseInt(primero)){
+                document.write(primero + " es mayor que "+ segundo);
             } else {
-                document.write("Suspenso");
+                document.write(primero + " es igual que "+ segundo);
             }
         }
-    </script>
+    </script> -->
 
 </body>
 
