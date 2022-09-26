@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
-<!-- EJERCICIO 1-->
+    <!-- EJERCICIO 1-->
 
-    <!--<script>
+    <!-- <script>
         var nombre = prompt("Ingresa su nombre:", "");
         var edad = prompt("Ingresa su edad:", "");
         var altura = prompt("Ingresa su altura:", "");
         var casado = new Boolean();
         var booleano = prompt("¿Casado o soltero?", "");
-        if(booleano == "casado"){
-            casado=true;
+        if (booleano == "casado") {
+            casado = true;
         }
-            else if(booleano=="soltero"){
-            casado=false;
+        else if (booleano == "soltero") {
+            casado = false;
         }
 
-        document.write("Mi nombre es " + nombre + ", mi edad es de "+ edad + "años y mi altura es " + altura + " centímetros.");
-        if(casado==true){
+        document.write("Mi nombre es " + nombre + ", mi edad es de " + edad + "años y mi altura es " + altura + " centímetros.");
+        if (casado == true) {
             document.write("<br>");
             document.write("Estoy casado.");
-        } else if(casado==false){
+        } else if (casado == false) {
             document.write("<br>");
             document.write("Estoy soltero.");
         }
-    </script>-->
+    </script> -->
 
-<!-- EJERCICIO 2-->
+    <!-- EJERCICIO 2-->
 
-    <form action="">
+
+    <!-- <form action="">
         <label for="">Ingrese su nombre y edad:</label>
         <textarea name="" id="nombre" cols="30" rows="10"></textarea>
         <input type="submit" onclick="mostrarNombre()">
     </form>
     <script>
-        function mostrarNombre(){
+        function mostrarNombre() {
             var nombre = document.getElementById("nombre").value;
             var edad = document.getElementById("nombre").value;
             var nombrebueno = nombre.replace(/(\d+)/g, "");
+            var nombrebuenobueno = nombrebueno.replace(/[^a-zA-Z ]/g, "");
             var regex = /(\d+)/g;
             var edadbuena = edad.match(regex);
-            document.write("Su nombre es " + nombrebueno + ".");
+            document.write("Su nombre es " + nombrebuenobueno + ".");
             document.write(" Su edad es de " + edadbuena + " años.");
 
-            
-            
+
+
             //var nombrebueno = nombre.match(regex2);
-            
+
 
             console.log("he llegado");
 
-            
+
         }
+
+
 
         /*document.write("Ingrese aquí su nombre:");
         document.write("<br>");
@@ -68,8 +74,83 @@
         document.write("</form>");
 
         mostrarNombre();*/
+    </script> -->
+
+
+    <!-- EJERCICIO 3-->
+
+    <!-- <form action="">
+        <label for="">Opere:</label><br>
+        <input type="text" id="primero"> <label for="">+</label><input type="text" id="segundo"><label for="">=</label>
+        <input type="submit" onclick="mostrarNombre()">
+    </form>
+    <script>
+        function mostrarNombre() {
+            var primero = document.getElementById("primero").value;
+            var segundo = document.getElementById("segundo").value;
+            document.write(parseInt(primero) + parseInt(segundo));
+
+
+
+            //var nombrebueno = nombre.match(regex2);
+
+
+            console.log("he llegado");
+
+
+        }
+    </script> -->
+
+    <!-- EJERCICIO 4-->
+
+    <!-- <form action="">
+        <label for="">Ingrese nombre del alumno y nota:</label><br>
+        <textarea name="" id="nombre" cols="30" rows="10"></textarea>
+        <input type="submit" onclick="mostrarNombre()">
+    </form>
+    <script>
+        function mostrarNombre() {
+            var nombre = document.getElementById("nombre").value;
+            var nota = document.getElementById("nombre").value;
+            var nombrebueno = nombre.replace(/(\d+)/g, "");
+            var nombrebuenobueno = nombrebueno.replace(/[^a-zA-Z ]/g, "");
+            var regex = /(\d+)/g;
+            var notabuena = nota.match(regex);
+            
+            document.write("Estudiante: " + nombrebuenobueno + ".");
+            if(notabuena>4){
+                document.write("Aprobado");
+            } else {
+                document.write("Suspenso");
+            }
+        }
+    </script> -->
+
+    <!-- EJERCICIO 5-->
+
+    <form action="">
+        <label for="">Ingrese nombre del alumno y nota:</label><br>
+        <textarea name="" id="nombre" cols="30" rows="10"></textarea>
+        <input type="submit" onclick="mostrarNombre()">
+    </form>
+    <script>
+        function mostrarNombre() {
+            var nombre = document.getElementById("nombre").value;
+            var nota = document.getElementById("nombre").value;
+            var nombrebueno = nombre.replace(/(\d+)/g, "");
+            var nombrebuenobueno = nombrebueno.replace(/[^a-zA-Z ]/g, "");
+            var regex = /(\d+)/g;
+            var notabuena = nota.match(regex);
+
+            document.write("Estudiante: " + nombrebuenobueno + ".");
+            if (notabuena > 4) {
+                document.write("Aprobado");
+            } else {
+                document.write("Suspenso");
+            }
+        }
     </script>
-    
-    
+
 </body>
+
 </html>
