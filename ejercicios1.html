@@ -147,6 +147,51 @@
         }
     </script> -->
 
+    <!-- EJERCICIO 6-->
+
+    <!-- <form action="">
+        <label for="">Ingrese dos números y le diré cual es mayor.</label><br>
+        <input type="number" id="primero">
+        <br><br>
+        <input type="number" id="segundo">
+        <br><br>
+        <input type="number" id="tercero">
+        <input type="submit" onclick="mostrarNombre()">
+    </form>
+    <script>
+        function mostrarNombre() {
+            var primero = document.getElementById("primero").value;
+            var segundo = document.getElementById("segundo").value;
+            var tercero = document.getElementById("tercero").value;
+            if (parseInt(primero) > (parseInt(segundo) && parseInt(tercero))) {
+                document.write(primero + " es el mayor de todos.");
+            } else if (parseInt(segundo) > (parseInt(primero) && parseInt(tercero))){
+                document.write(segundo + " es el mayor de todos.");
+            } else if (parseInt(tercero) > (parseInt(primero) && parseInt(segundo))){
+                document.write(tercero + " es el mayor de todos.");
+            }
+        }
+    </script> -->
+
+    <!-- EJERCICIO 7-->
+
+    <form action="">
+        <label for="">Par o impar:</label><br>
+        <input type="number" id="primero">
+        <br><br>
+        <input type="submit" onclick="mostrarNombre()">
+    </form>
+    <script>
+        function mostrarNombre() {
+            var primero = document.getElementById("primero").value;
+            if (parseInt(primero)%2==0) {
+                document.write(primero + " es par.");
+            } else {
+                document.write(primero + " es impar.");
+            }
+        }
+    </script>
+
 </body>
 
 </html>
