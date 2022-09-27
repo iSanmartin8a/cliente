@@ -12,28 +12,62 @@
 
     <!-- EJERCICIO 1-->
 
-    <!-- <script>
+    <script>
         var nombre = prompt("Ingresa su nombre:", "");
         var edad = prompt("Ingresa su edad:", "");
         var altura = prompt("Ingresa su altura:", "");
         var casado = new Boolean();
         var booleano = prompt("¿Casado o soltero?", "");
-        if (booleano == "casado") {
-            casado = true;
-        }
-        else if (booleano == "soltero") {
-            casado = false;
-        }
+        // if (booleano == "casado") {
+        //     casado = true;
+        // }
+        // else if (booleano == "soltero") {
+        //     casado = false;
+        // }
 
         document.write("Mi nombre es " + nombre + ", mi edad es de " + edad + "años y mi altura es " + altura + " centímetros.");
-        if (casado == true) {
-            document.write("<br>");
-            document.write("Estoy casado.");
-        } else if (casado == false) {
-            document.write("<br>");
-            document.write("Estoy soltero.");
+        switch (booleano) {
+            case "casado":
+                document.write("<br>");
+                document.write("Estoy casado.");
+                break;
+            case "Casado":
+                document.write("<br>");
+                document.write("Estoy casado.");
+                break;
+            case "soltero":
+                document.write("<br>");
+                document.write("Estoy soltero.");
+                break;
+            case "Soltero":
+                document.write("<br>");
+                document.write("Estoy soltero.");
+                break;
+            case "casada":
+                document.write("<br>");
+                document.write("Estoy casada.");
+                break;
+            case "Casada":
+                document.write("<br>");
+                document.write("Estoy casada.");
+                break;
+            case "soltera":
+                document.write("<br>");
+                document.write("Estoy soltera.");
+                break;
+            case "Soltera":
+                document.write("<br>");
+                document.write("Estoy soltera.");
+                break;
         }
-    </script> -->
+        // if (casado == true) {
+        //     document.write("<br>");
+        //     document.write("Estoy casado.");
+        // } else if (casado == false) {
+        //     document.write("<br>");
+        //     document.write("Estoy soltero.");
+        // }
+    </script>
 
     <!-- EJERCICIO 2-->
 
@@ -175,7 +209,7 @@
 
     <!-- EJERCICIO 7-->
 
-    <form action="">
+    <!-- <form action="">
         <label for="">Par o impar:</label><br>
         <input type="number" id="primero">
         <br><br>
@@ -190,7 +224,7 @@
                 document.write(primero + " es impar.");
             }
         }
-    </script>
+    </script> -->
 
 </body>
 
