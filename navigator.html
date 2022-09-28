@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write(navigator.appCodeName + ", <br>" + navigator.appName + ", <br>" + navigator.appVersion + ", <br>" + navigator.cookieEnabled + ", <br>" + navigator.platform + ", <br>" + navigator.userAgent + ", <br>" + navigator.geolocation + ", <br>" + navigator.plugins) + ". <br>";
+
+        if (navigator.javaEnabled()) {
+            document.write("Hay java")
+        } else {
+            document.write("No hay java")
+        }
+    </script>
+</body>
+
+</html>
