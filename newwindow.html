@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrimos otra web del Repo con una función y mostramos en un h1 el Sistema Operativo.</title>
+</head>
+
+<body>
+    <div>
+        <script>
+            // var opciones = "left=100, top=100, height=1000, width=1000";
+
+            function abrirVar() {
+                window.open("var.html", "Var");
+            }
+
+            var SO = navigator.platform;
+
+            document.write("<h1>Documento abierto con: " + SO + "</h1>");
+
+        </script>
+        <button onclick="abrirVar()">Abrir otra página</button>
+    </div>
+</body>
+
+</html>

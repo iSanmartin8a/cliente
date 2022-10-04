@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso Ejercicios de Clase</title>
+</head>
+
+<body>
+    <h3>Pueden caer en examen.</h3>
+
+    <h4>Fecha y hora</h4>
+    <script>
+        var fecha_actual = new Date();
+        var fecha_futura = new Date(2023, 1, 1);
+        var restante = fecha_futura - fecha_actual;
+        var div = document.getElementById(div);
+        div = document.write(restante);
+
+        function reload() {
+            location.reload();
+        };
+
+        setTimeout(function () {
+            window.location.href = window.location;
+        }, 30);
+    </script>
+
+    <div id="div"></div>
+    <button onclick="reload()" onload="refresh()">Recarga el contador</button>
+
+    <h4>Textos y estilos</h4>
+    <script>
+        var texto = new String("Hola, buenas tardes.");
+        document.write("Longitud: " + texto.length + ". " + texto.italics() + " " + texto.bold() + " " + texto.fontcolor("#FF0000") + " " + texto.fontsize(20) + " " + texto.strike());
+    </script>
+</body>
+
+</html>
