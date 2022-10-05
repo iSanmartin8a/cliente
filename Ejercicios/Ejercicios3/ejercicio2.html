@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <style>
+        p {
+            margin-left: 4%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ejercicio 2</h1>
+
+    <ol>
+        <li value="2">
+            Crea una página Web que muestre la fecha y hora actual con el siguiente formato:
+        </li>
+    </ol>
+
+    <p>
+        Hoy es lunes, 28 de Noviembre de 2022 y son las 14:32 horas.<br>
+    </p>
+
+    <h2>Resolución:</h2>
+
+    <script>
+        const dias = [
+            'Lunes',
+            'Martes',
+            'Miércoles',
+            'Jueves',
+            'Viernes',
+            'Sábado',
+            'Domingo'
+        ];
+
+        const meses = [
+            'Enero',
+            'Febrero',
+            'Marzo',
+            'Abril',
+            'Mayo',
+            'Junio',
+            'Julio',
+            'Agosto',
+            'Septiembre',
+            'Octubre',
+            'Noviembre',
+            'Diciembre'
+        ];
+        const fecha_actual = new Date();
+
+        const nombreDia =   dias[fecha_actual.getUTCDay()];
+        const nombreMes =   meses[fecha_actual.getMonth()];
+
+        document.write("Hoy es " + nombreDia + ", " + fecha_actual.getUTCDate() + " de " + nombreMes + " de " + fecha_actual.getFullYear() + " y son las " + fecha_actual.getHours() + ":" + fecha_actual.getMinutes() + " horas.");
+    </script>
+
+</body>
+
+</html>

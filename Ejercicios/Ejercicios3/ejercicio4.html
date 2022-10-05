@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        p {
+            margin-left: 4%;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position: fixed; top: 0%; left: 0%; width: 100%; height: 50%;">
+        <h1>Ejercicio 4</h1>
+    
+        <ol>
+            <li value="4">
+                Crea una página Web que muestre el valor en píxeles de la diagonal de la pantalla del usuario (raíz cuadrada de la suma del cuadrado de la anchura más el cuadrado de la altura). Además, muestre el texto en color blanco, el fondo en gris y el título de la página sea “Varios objetos predefinidos de JS”. <br><br>
+                Puedes ayudarte de los objetos Screen, Math y Document. <br>
+            </li>
+        </ol>
+    
+        <h2>Resolución:</h2>
+    </div>
+
+    <script>
+        const diagonal = Math.sqrt(screen.width + screen.height);
+        document.write("<div style='background-color: grey; color: white; position: fixed; left: 0%; bottom: 0%; width: 100%; height: 50%;'><h1>Varios objetos predefinidos de JavaScript</h1>")
+        document.write("<p style='text-align: center;'> El valor en píxeles de la diagonal de la pantalla es " + diagonal + "</p></div>")
+    </script>
+
+</body>
+
+</html>
