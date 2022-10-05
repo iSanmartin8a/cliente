@@ -34,7 +34,9 @@
     <h2>Resolución:</h2>
 
     <script>
+        // Declaro la constante de las letras del DNI.
         const letras = 'TRWAGMYFPDXBNJZSQVHLCKET';
+        // Pido a través de un prompt de JS el número del DNI.
         var numero = prompt("Introduzca su número del Documento Nacional de Identidad:");  
         // Si pone más de 8 números, sale otro prompt indicando el error hasta que sean los dígitos correctos. También, había probado la función slice(0, 8) para que recortase el valor del prompt a 8 números.
         while (numero.length != 8) { 

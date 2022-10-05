@@ -33,7 +33,8 @@
 
     <h2>Resolución:</h2>
     <script>
-        // He hecho un bucle del 0 al 100, y dentro un condicional que me escriba el número si contiene el 7 o es múltiplo, y sino me escriba BUM y un salto de línea.
+        // He hecho un bucle del 0 al 100, y dentro un condicional que me escriba el número si contiene el 7 o es múltiplo, y sino me escriba PUM y un salto de línea.
+        // He declarado un else de más, para cuando sea 100 que no ponga coma, sino punto. Se podría hacer con un switch, pero como estoy comparando de maneras diferentes me ha parecido más sencillo así.
         for (var i = 0; i <= 100; i++) {
             var numtext = "" + i;
             if ((numtext.indexOf("7") > -1) || (i%7==0))  {
