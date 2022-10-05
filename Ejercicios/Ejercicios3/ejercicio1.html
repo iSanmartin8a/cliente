@@ -37,9 +37,11 @@
         for (var i = 0; i <= 100; i++) {
             var numtext = "" + i;
             if ((numtext.indexOf("7") > -1) || (i%7==0))  {
-                document.write(" BUM <br>");
+                document.write(" PUM <br>");
+            } else if (numtext == 100){
+                document.write(i + ".");
             } else {
-                document.write(i + " ");
+                document.write(i + ", ");
             }
         }
     </script>
