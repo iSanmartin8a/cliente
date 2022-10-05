@@ -38,7 +38,7 @@
         var numero = prompt("Introduzca su número del Documento Nacional de Identidad:");  
         // Si pone más de 8 números, sale otro prompt indicando el error hasta que sean los dígitos correctos. También, había probado la función slice(0, 8) para que recortase el valor del prompt a 8 números.
         while (numero.length != 8) { 
-            numero = prompt("Error: El número del DNI consta de 8 unidades. Introduzca su número del Documento Nacional de Identidad:");
+            numero = prompt("Error: El número del DNI consta de 8 unidades.\n \n Introduzca su número del Documento Nacional de Identidad:");
         }
         const resto = numero % 23;
         const letra = letras.charAt(resto);
