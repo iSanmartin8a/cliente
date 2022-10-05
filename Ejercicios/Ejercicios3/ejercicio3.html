@@ -40,6 +40,7 @@
         while (numero.length != 8) { 
             numero = prompt("Error: El número del DNI consta de 8 unidades.\n \n Introduzca su número del Documento Nacional de Identidad:");
         }
+        // He usado la función charAt, que te localiza el carácter número X (en este caso resto), de una cadena letras, que es dada en el enunciado. Para el resto, uso el operador % para dividir.
         const resto = numero % 23;
         const letra = letras.charAt(resto);
         document.write(numero + letra);
