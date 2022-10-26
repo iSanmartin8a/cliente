@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <script>
+        var vector = new Array(true, 5, false, "hola", "adios", 2);
+
+        if(vector[3] > vector[2]){
+            alert(vector[3] + ' es mayor que ' + vector[2]);
+        }else if(vector[3] < vector[2]){
+            alert(vector[3] + ' es menor que ' + vector[2]);
+        }else{
+            alert(vector[3] + ' es igual que ' + vector[2]);
+        }
+
+        if((vector[0] == true) | (vector[2] != true)){
+            alert("Al menos uno de los dos es true.");
+        }
+
+        if((vector[0] == true) & (vector[2] == true)){
+            alert("Ambos son true.");
+        } else {
+            alert("Al menos uno de los dos no es true.");
+        }
+
+        var suma = vector[1] + vector[5];
+        var resta = vector[1] - vector[5];
+        var multiplicacion = vector[1] * vector[5];
+        var division = vector[1] / vector[5];
+        var modulo = vector[1] % vector[5];
+
+        alert("La suma es: " + suma + ". La resta es: " + resta + ". La multiplicación es: " + multiplicacion + ". La división es: " + division + ". El módulo es: " + modulo);   
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
