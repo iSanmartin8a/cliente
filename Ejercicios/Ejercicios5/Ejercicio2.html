@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <script>
+        // Pido los dos números al usuario, que yo no tengo personalidad.
+        const numero1 = prompt("Introduzca el primer número: ");
+        const numero2 = prompt("Introduzca el segundo número: ");
+        // Declaro la función a la que le paso los dos números.
+        function funcionTotal(numero1, numero2) {
+            // Comparo cual de los dos números es mayor o si son iguales. Me pide que vea si es mayor solamente, pero si no lo es, ya veo si es menor o si son iguales.
+            if(numero1>numero2){
+                document.write("El primer número que es " + numero1 + " es mayor que el segundo que es " + numero2 + ". <br>");
+            } else if(numero1<numero2){
+                document.write("El segundo número que es " + numero2 + " es mayor que el primero que es " + numero1 + ". <br>");
+            } else {
+                document.write("Los números son iguales. <br>");
+            }
+            // Compruebo si el segundo número es positivo, negativo o cero. Se me pide si es positivo, pero si no lo es, ya veo si es negativo o si es cero.    
+            if(numero2>0){
+                document.write("El segundo número que es " + numero2 + " es positivo. <br>");
+            } else if(numero2<0){
+                document.write("El segundo número que es " + numero2 + " es negativo. <br>");
+            } else {
+                document.write("El segundo número es 0. <br>");
+            }
+            // Compruebo si el primer número es negativo o distinto de cero.
+            if(numero1<0 | numero1!=0){
+                document.write("El primer número que es " + numero1 + " es negativo o distinto de cero. <br>");
+            } else {
+                document.write("El primer número es positivo o cero. <br>");
+            }
+            // Compruebo si el primer número más uno es mayor o igual que el segundo.
+            if(numero1+1>=numero2){
+                document.write("El primer número que es " + numero1 + "más uno es mayor o igual que el segundo que es " + numero2 + ". <br>");
+            } else {
+                document.write("El primer número que es " + numero1 + "más uno es menor que el segundo que es " + numero2 + ". <br>");
+            }
+        }
+
+        funcionTotal(numero1, numero2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
