@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script>
+        // A través de prompts, pido al usuario que introduzca las propiedades de los 3 objetos ProductosAlimenticios y los guardo en variables.
+        var codigo1 = prompt("Introduzca el código del producto: ");
+        var nombre1 = prompt("Introduzca el nombre del producto: ");
+        var precio1 = prompt("Introduzca el precio del producto: ");
+
+        var codigo2 = prompt("Introduzca el código del producto: ");
+        var nombre2 = prompt("Introduzca el nombre del producto: ");
+        var precio2 = prompt("Introduzca el precio del producto: ");
+
+        var codigo3 = prompt("Introduzca el código del producto: ");
+        var nombre3 = prompt("Introduzca el nombre del producto: ");
+        var precio3 = prompt("Introduzca el precio del producto: ");
+        // Creo la clase ProductosAlimenticios con sus propiedades y métodos.
+        class ProductosAlimenticios {
+            constructor(codigo, nombre, precio) {
+                this.codigo = codigo;
+                this.nombre = nombre;
+                this.precio = precio;
+                // this.imprimeDatos();
+            }
+
+            imprimeDatos() {
+                document.write("<strong>Código:</strong> " + this.codigo + "<br> <strong>Nombre:</strong> " + this.nombre + "<br> <strong>Precio:</strong> " + this.precio + "<br>")
+            }
+
+        }
+        // Creo los objetos de la clase ProductosAlimenticios con los datos introducidos por el usuario.
+        var alimento1 = new ProductosAlimenticios(codigo1, nombre1, precio1);
+        var alimento2 = new ProductosAlimenticios(codigo2, nombre2, precio2);
+        var alimento3 = new ProductosAlimenticios(codigo3, nombre3, precio3);
+        // Creo un array con los objetos de la clase ProductosAlimenticios.
+        var alimentos = [alimento1, alimento2, alimento3];
+        // Recorro el array con un bucle for y llamo al método imprimeDatos() de cada objeto.
+        for (var i = 0; i < alimentos.length; i++) {
+            alimentos[i].imprimeDatos();
+            document.write("<br>");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
