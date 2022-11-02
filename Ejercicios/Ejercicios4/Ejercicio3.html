@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3</title>
     <script>
+        // Declaro el número para que lo introduzca el usuario por un prompt.
         var numero = window.prompt("Introduce un número: ");
-
+        // Abro la función en la que calculo el factorial. Con un for recorro desde 1 hasta el número en sí, y lo voy multiplicando. Se va acumulando en la variable total que es lo que se devolverá.
         function factorial(n) {
             var total = 1;
             for (i = 1; i <= n; i++) {
@@ -16,9 +17,9 @@
             }
             return total;
         }
-
+        // Llamó a la función pasándole el número que ha introducido el usuario.
         var total = factorial(numero);
-
+        // Lo muestro en un alert.
         alert("El factorial de " + numero + " es " + total);
     </script>
 </head>

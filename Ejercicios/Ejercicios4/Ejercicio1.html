@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1</title>
     <script>
-        var cadena = prompt("Pon lo que quieras:");
-
-        if(cadena.toUpperCase() == cadena){
-            alert("Está en mayúsculas");
-        }else if(cadena.toLowerCase() == cadena){
-            alert("Está en minúsculas");
-        }else{
-            alert("Está en mayúsculas y minúsculas");
+        // Creo la función
+        function maymin() {
+            // Declaro la variable a través de un prompt en el que el usuario escribe lo que quiere.
+            var cadena = window.prompt("Introduce una cadena: ");
+            // Un if (podría ser un switch) que comprueba si la cadena está en mayúsculas o minúsculas o si no es ninguna de las dos comparando con las funciones toUpperCase() y toLowerCase().
+            if (cadena.toUpperCase() == cadena) {
+                alert("Está en mayúsculas");
+            } else if (cadena.toLowerCase() == cadena) {
+                alert("Está en minúsculas");
+            } else {
+                alert("Está en mayúsculas y minúsculas");
+            }
         }
+        // Llamo a la función.
+        maymin();
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>
