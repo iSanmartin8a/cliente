@@ -4,9 +4,9 @@ const secretNumber = Math.trunc(Math.random() * 20) + 1
 const score = 20
 const highscore = 0
 
-const scoreField = document.querySelector('.score').textContent
-const highscoreField = document.querySelector('.highscore').textContent
-const numberFile = document.querySelector('.guess').textContent
+const scoreField = document.querySelector('.score')
+const highscoreField = document.querySelector('.highscore')
+const numberFile = document.querySelector('.guess')
 
 scoreField = score
 highscoreField = highscore
