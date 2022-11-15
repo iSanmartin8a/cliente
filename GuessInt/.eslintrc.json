@@ -10,6 +10,8 @@
     "sourceType": "module"
   },
   "rules": {
-    
-  }
+    "semi": ["error", "never"],
+    "no-console": "off",
+    "linebreak-style": "off"
+    }
 }
