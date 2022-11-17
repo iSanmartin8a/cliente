@@ -1,15 +1,77 @@
+/* eslint-disable func-names */
+/* eslint-disable prefer-arrow-callback */
+/* eslint-disable quotes */
+/* eslint-disable space-unary-ops */
+/* eslint-disable no-plusplus */
+/* eslint-disable semi */
+/* eslint-disable indent */
+/* eslint-disable no-lonely-if */
+/* eslint-disable prefer-const */
+/* eslint-disable no-empty */
+/* eslint-disable no-return-assign */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable padded-blocks */
 /* eslint-disable no-const-assign */
 /* eslint-disable no-unused-vars */
-const secretNumber = Math.trunc(Math.random() * 20) + 1
-const score = 20
-const highscore = 0
 
-const scoreField = document.querySelector('.score')
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+let score = 20;
+let highscore = 0;
+
+const guessField = document.querySelector('.guess')
+const messageField = document.querySelector('.message')
+const numberField = document.querySelector('.number')
 const highscoreField = document.querySelector('.highscore')
-const numberFile = document.querySelector('.guess')
+const scoreField = document.querySelector('.score')
+const body = document.querySelector('body')
 
-scoreField = score
-highscoreField = highscore
-numberFile = secretNumber
+const displayMessage = function (message) {
+  messageField.textContent = message;
+};
 
-console.log(`El campo score tiene el valor ${scoreField}`)
+document.querySelector('.check').addEventListener('click', function () {
+  const guess = Number(guessField.value);
+  console.log(guess, typeof guess);
+
+  // When there is no input
+  if (!guess) {
+    displayMessage('⛔️ No number!');
+
+    // When player wins
+  } else if (guess === secretNumber) {
+    displayMessage('🎉 Correct Number!');
+    numberField.textContent = secretNumber;
+
+    body.style.backgroundColor = '#60b347';
+    numberField.style.width = '30rem';
+
+    if (score > highscore) {
+      highscore = score;
+      highscoreField.textContent = highscore;
+    }
+
+    // When guess is wrong
+  } else if (guess !== secretNumber) {
+    if (score > 1) {
+      displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!');
+      score--;
+      scoreField.textContent = score;
+    } else {
+      displayMessage('💥 You lost the game!');
+      scoreField.textContent = 0;
+    }
+  }
+});
+
+document.querySelector('.again').addEventListener('click', function () {
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  
+  displayMessage('Start guessing...');
+  scoreField.textContent = score;
+  numberField.textContent = '?';
+  guessField.value = '';
+
+  body.style.backgroundColor = '#222';
+  numberField.style.width = '15rem';
+});
