@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <script>
+        // Pido al usuario mediante la función del objeto Window .prompt() dos números y que me indique mediante texto la operación que quiere realizar.
+        var numero1 = prompt("Introduzca el primer número: ");
+        var numero2 = prompt("Introduzca el segundo número: ");
+        var operacion = prompt("Operación que desea realizar (sumar, restar, multiplicar o dividir): ");
+        // Declaro una variable donde almacenaré el resultado de la operación y un array de las posibles operaciones que se nos indican en el ejercicio.
+        var resultado;
+        var operacionesPosibles = ["sumar", "restar", "multiplicar", "dividir"];
+        // Hago dos condicionales if para ver si los dos números que estamos pidiendo al usuario son números correctos y no ha introducido texto por ejemplo.
+        // Si pasa esa prueba y son números, compruebo si son números enteros (Int) o con decimales (Float) y según cuál sea el caso, los paso a Int (.parseInt)
+        // o a Float (.parseFloat()).
+        if (isNaN(numero1)) {
+            numero1 = prompt("Introduzca un primer número correcto: ");
+        } else if (numero1.isInteger) {
+            numero1 = parseInt(numero1);
+        } else {
+            numero1 = parseFloat(numero1);
+        }
+        
+        if (isNaN(numero2)) {
+            numero2 =  prompt("Introduzca un segundo número correcto: ");
+        } else if (numero2.isInteger) {
+            numero2 = parseInt(numero2);
+        } else {
+            numero2 = parseFloat(numero2);
+        }
+        // Convierto la operación que se nos ha indicado a través del prompt a minúsculas para poder comparar con el array de operaciones.
+        // También hago .trim() para quitar posibles espacios por error o innecesarios que nos dificulten la comparación.
+        operacion = operacion.toLowerCase().trim();
+        // Hago una serie de condicionales else if para realizar la operación indicada en cada caso. Para la suma uso el operador "+"", para la resta, "-", 
+        // para la multiplicación, "*" y para la división, "/". Si no cumple ninguna de las posibles operaciones le pido al usuario que lo vuelva a introducir.
+        if(operacion == operacionesPosibles[0]) {
+            resultado = numero1 + numero2;
+        } else if (operacion == operacionesPosibles[1]){
+            resultado = numero1 - numero2;
+        } else if (operacion == operacionesPosibles[2]){
+            resultado = numero1 * numero2;
+        } else if (operacion == operacionesPosibles[3]){
+            resultado = numero1 / numero2;
+        } else {
+            operacion = prompt("Introduce una operación válida: ")
+        }
+        // Declaro las opciones de posición y tamaño de la ventana, y declaro una nueva ventana a través de window.open() pasándole los valores.
+        var opciones = "left=700, top=400, height=150, width=300";
+        var ventanaResultado = window.open("", "MiVentana", opciones);
+        // Doy estilos a la nueva ventana a través del DOM y muestro el resultado a través de la función .write().
+        ventanaResultado.document.write("El resultado de la operación es: " + resultado);
+        ventanaResultado.document.body.style.backgroundColor = "yellow";
+        ventanaResultado.document.body.style.color = "green";
+
+        // Hago una condicional if por la cual si existe la nueva ventana, que la cierre a los 5s con el método .close() y recargue la principal con .reload().
+        if (ventanaResultado) {
+            setTimeout(function () {
+                ventanaResultado.close();
+                location.reload();
+            }, 5000);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

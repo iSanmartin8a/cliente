@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script>
+        // Declaro lo primero de todo la clase que voy a necesitar, el objeto CuentaBanco que voy a usar posteriormente.
+        class CuentaBanco {
+            constructor(nombre, apellidos, saldo) {
+                this.nombre = nombre;
+                this.apellidos = apellidos;
+                this.saldo = saldo;
+            }
+        }
+        // Creo la función que se llevará a cabo al clicar el botón.
+        function cuentaBancaria () {
+            // Esta función pide al usuario a través de prompts un nombre, apellidos y un saldo para la cuenta.
+            var nombre = prompt("Introduzca su nombre: ");
+            var apellidos = prompt("Introduzca sus apellidos: ");
+            var saldo = prompt("Introduzca el saldo de la cuenta: ");
+            // Formateo los parámetros para que sean fáciles de leer a través de .trim() quito espacios innecesarios. Los convierto a minúsculas a través de toLowerCase().
+            nombre = nombre.trim().toLowerCase();
+            apellidos = apellidos.trim().toLowerCase();
+            saldo = saldo.trim().toLowerCase();
+            // Con estas condicionales checkeo si el nombre y los apellidos no contienen dígitos (uso el método .search() y le paso regex de dígitos) y si el saldo es un número. 
+            // En caso de que esté mal, salta otro prompt para arreglarlo.
+            if (nombre.search("\d")) {
+                nombre = prompt("Introduce un nombre correcto (sin números): ");
+            } else if (apellidos.search("\d")) {
+                apellidos = prompt("Introduce unos apellidos correctos (sin números): ");
+            } else if (isNaN(saldo)) {
+                saldo = prompt("Introduce un saldo correcto (números): ")
+            }
+            // Declaro e inicializo un objeto de la clase CuentaBanco con los parámetros que hemos pedido al usuario.
+            var cuenta = new CuentaBanco(nombre, apellidos, saldo);
+            // Creo las ventanas emergentes a través de .alert() del objeto Window. En ellos, doy un mensaje de éxito y muestro los datos del nuevo objeto.
+            alert("Se ha creado una nueva cuenta bancaria con éxito.");
+            alert("Los datos son los siguientes:\n Nombre: " + cuenta.nombre + "\n Apellidos: " + cuenta.apellidos + "\n Saldo: " + cuenta.saldo + "€");
+        }
+        // Fuera de la función, a través del método .write(), añado al HTML un botón que al pulsarlo lance la función de JavaScript cuentaBancaria().
+        document.write("<button onclick='cuentaBancaria()'>Crear cuenta bancaria</button>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

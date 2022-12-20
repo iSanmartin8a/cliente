@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <script>
+        // Declaro e inicializo un array con los números introducidos aleatorios. Pares e impares.
+        // Declaro un integer que me servirá de índice en el do-while, ya que irá aumentando.
+        // Declaro un nuevo array en el que iré guardando los números impares del otro array.
+        var numeros = new Array();
+        var impares= new Array();
+        var i = -1;
+        // Hago el bucle condicional do-while, que mientras la longitud del array impares sea menor a 10, 
+        // aumentará el índice y hará un condicional if que si el elemento del array numeros tiene resto distinto a 0 al dividir para 2 (impar),
+        // lo almacenará, lo concatenará mediante la función .concat() en el array de impares.
+        do {
+            
+            do {
+                var num = prompt("Introduce un número: ");
+            } while (isNaN(num) || num == "" || num == null);
+
+            numeros.push(num);
+            i = i +1;
+            if (numeros[i] % 2 != 0) {
+                // document.write(numeros[i] + " - ");
+                impares = impares.concat(numeros[i]);
+            }
+        } while (impares.length < 10)
+        // Mediante document.write() muestro la longitud del array de números y muestro los 10 primeros números impares y en orden inverso.
+        // Separo los elementos con la función .join() y doy orden inverso con la función .reverse() del objeto Array.
+        document.write("<br> Total de números introducidos: " + numeros.length)
+        document.write("<br> Primeros 10 números impares al revés: " + impares.reverse().join(" - "));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
