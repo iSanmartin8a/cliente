@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function tamanoVentanaNavegador() {
+            var dimensiones = [];
+            if (typeof (window.innerWidth) == 'number') {
+                dimensiones = [window.innerWidth, window.innerHeight];
+            } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+                dimensiones = [document.documentElement.clientWidth, document.documentElement.clientHeight];
+            } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+                dimensiones = [document.body.clientWidth, document.body.clientHeight];
+            }
+            return dimensiones;
+        }
+        
+        document.body.style.margin = "0";
+        document.write("<div id='container'><div id='rojo'></div><div id='amarillo'></div><div id='azul'></div><div id='verde'></div></div>");
+        var dimensiones = tamanoVentanaNavegador();
+        var width = parseFloat(dimensiones[0])/2;
+        var height = parseFloat(dimensiones[1])/2;
+        var container = document.getElementById("container");
+        container.style.display = "flex";
+        container.style.flexDirection = "row";
+        container.style.flexWrap = "wrap";
+        container.style.width = dimensiones[0] + "px";
+        container.style.height = dimensiones[1] + "px";
+        var azul = document.getElementById("azul");
+        azul.style.backgroundColor = "blue";
+        var rojo = document.getElementById("rojo");
+        rojo.style.backgroundColor = "red";
+        var amarillo = document.getElementById("amarillo");
+        amarillo.style.backgroundColor = "yellow";
+        var verde = document.getElementById("verde");
+        verde.style.backgroundColor = "green";
+        azul.style.width = width + "px";
+        azul.style.height = height + "px";
+        rojo.style.width = width + "px";
+        rojo.style.height = height + "px";
+        verde.style.width = width + "px";
+        verde.style.height = height + "px";
+        amarillo.style.width = width + "px";
+        amarillo.style.height = height + "px";
+        azul.onclick = function() {
+            alert("Azul");
+        }
+        amarillo.onclick = function() {
+            alert("Amarillo");
+        }
+        verde.onclick = function() {
+            alert("Verde");
+        }
+        rojo.onclick = function() {
+            alert("Rojo");
+        }
+
+    </script>
+</body>
+
+</html>

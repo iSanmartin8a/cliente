@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+        }
+
+        div {
+            width: 70rem;
+            height: 20rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 2rem;
+        }
+
+        input {
+            width: 7rem;
+            height: 1rem;
+        }
+
+        label {
+            width: 20rem;
+        }
+    </style>
+</head>
+
+<body onmousemove="showCoords()">
+    <div>
+        <label for="">Coordenada X navegador</label>
+        <input type="text" name="uno" id="uno">
+        <label for="">Coordenada Y navegador</label>
+        <input type="text" name="dos" id="dos">
+        <label for="">Coordenada X monitor</label>
+        <input type="text" name="tres" id="tres">
+        <label for="">Coordenada Y monitor</label>
+        <input type="text" name="cuatro" id="cuatro">
+        <label for="">Coordenada X absoluta</label>
+        <input type="text" name="cinco" id="cinco">
+        <label for="">Coordenada Y absoluta</label>
+        <input type="text" name="seis" id="seis">
+    </div>
+    <script>
+        function showCoords() {
+            var uno = document.getElementById("uno");
+            var dos = document.getElementById("dos");
+            var tres = document.getElementById("tres");
+            var cuatro = document.getElementById("cuatro");
+            var cinco = document.getElementById("cinco");
+            var seis = document.getElementById("seis");
+
+            uno.value = event.clientX;
+            dos.value = event.clientY;
+            tres.value = event.screenX;
+            cuatro.value = event.screenY;
+            cinco.value = event.pageX;
+            seis.value = event.pageY;
+        }
+    </script>
+</body>
+
+</html>

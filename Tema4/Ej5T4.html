@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showLimit() {
+            var limit = 100;
+            var text = document.getElementById("texto").value;
+            var resto = document.getElementById("resto");
+            if (text.length > limit) {
+                resto.style.color = "red";
+            } else if (limit - text.length < 10) {
+                resto.style.color = "orange";
+            } else if (limit - text.length < 50){
+                resto.style.color = "#ffb703";
+            } else {
+                resto.style.color = "green";
+            }
+            resto.innerHTML = "Quedan " + (limit - text.length) + " carácteres.";
+        }
+        document.write("<label>Máximo 100 carácteres.</label><br><label id='resto'></label><br><textarea id='texto' style='width: 20rem; height: 20rem;' onkeypress='showLimit()'></textarea>")
+    </script>
+</body>
+</html>

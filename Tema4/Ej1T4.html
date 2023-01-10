@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 35rem;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function openWindow() {
+            // var nuevaVentana = window.open();
+            // nuevaVentana.document.write("<h1>Esta es una nueva ventana</h1>");
+            alert("Has hecho click en la imagen");
+        }
+
+        function openWindowText() {
+            // var nuevaVentana = window.open();
+            // var texto = document.getElementById("texto");
+            // nuevaVentana.document.write("<h1>Esta es una nueva ventana:</h1>");
+            // nuevaVentana.document.write(texto.value);
+            alert("Has escrito una letra");
+        }
+
+        function showAlert() {
+            alert("Has hecho focus en el input");
+        }
+        
+
+        document.write("<img src='https://image.ondacero.es/clipping/cmsimages01/2017/04/20/5DC46C1A-E982-481E-82F0-CE9C1E1C6AD9/69.jpg?crop=1638,921,x0,y0&width=1280&height=720&optimize=low&format=webply' onclick='openWindow()'><br>");
+    
+        document.write("<input type='text' placeholder='Escribe lo que quieras' id='texto' name='texto' onkeydown='openWindowText()'><input type='button' value='Enviar' onclick='openWindowText()'><br>");
+    
+        document.write("<input type='text'><input type='text'><input type='text' id='important' onfocus='showAlert()'>")
+    </script>
+    
+</body>
+</html>
