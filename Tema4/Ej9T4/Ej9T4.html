@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var form = document.querySelector("form");
+
+        function validaEmail() {
+            valor = document.getElementById("campo").value;
+            if (/^(.+\@.+\..+)$/.test(valor)) {
+                return false;
+            }
+            return true;
+        }
+
+        function validaDNI() {
+            valor = document.getElementById("dni").value;
+            var letras = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D",
+                "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E", "T"];
+            if (!(/^\d{8}[A-Z]$/.test(valor))) { return false; }
+            if (valor.charAt(8) != letras[(valor.substring(0, 8)) % 23]) { return false; }
+            return true;
+        }
+
+        function validaTelefono() {
+            valor = document.getElementById("telefono").value;
+            if (!(/^\d{9}$/.test(valor))) {
+                return false;
+            }
+            return true;
+        }
+
+        function todoEnOrden() {
+            if (validaEmail() && validaDNI() && validaTelefono()) {
+                return true;
+                form.submit();
+            }
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="enviado.html" onsubmit="return todoEnOrden()">
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" onchange="return validaEmail()" required id="campo"><br>
+        <label for="dni">DNI: </label>
+        <input type="text" name="dni" id="dni" onchange="return validaDNI()" required id="dni"><br>
+        <label for="telefono">Telefono: </label>
+        <input type="tel" name="telefono" id="telefono" onchange="return validaTelefono()" id="telefono" required><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
