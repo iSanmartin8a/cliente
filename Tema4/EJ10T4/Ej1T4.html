@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function checkName() {
+            var name = prompt("Introduce tu nombre");
+            // console.log(typeof name);
+            while ((name.length < 1) || (/\d/.test(name))) {
+                name = prompt("Introduce tu nombre correctamente");
+            };
+            
+            var surname = prompt("Introduce tus apellidos");
+            
+            while ((surname.length < 1) || (/\d/.test(surname))) {
+                surname = prompt("Introduce tu apellido correctamente");
+            }
+            
+            var dni = prompt("Introduce tu dni");
+
+            while ((dni.length < 9) || (!/\d{8}\D{1}$/.test(dni))) {
+                dni = prompt("Introduce tu dni correctamente");
+            }
+
+            var tlf = prompt("Introduce tu teléfono");
+
+            while ((tlf.length < 9) || (!/\d{9}$/.test(tlf))) {
+                tlf = prompt("Introduce tu teléfono correctamente");
+            }
+
+            var email = prompt("Introduce tu email");
+
+            while ((email.length < 1) || (!/\w+@\w+\.\w{2,3}$/.test(email))) {
+                email = prompt("Introduce tu email correctamente");
+            }
+            
+            document.write("Nombre: " + name + "<br>");
+            document.write("Apellidos: " + surname + "<br>");
+            document.write("Dni: " + dni + "<br>");
+            document.write("Teléfono: " + tlf + "<br>");
+            document.write("Email: " + email + "<br>");
+        }
+
+        window.onload = function() {
+            checkName();
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <form action="alta.html">
+
+        <label for="name">Nombre: </label>
+        <input type="text" name="name" id="name" onkeypress="return permite(event, 'car')"/>
+
+        <label for="surname">Apellidos: </label>
+        <input type="text" name="surname" id="surname" onkeypress="return permite(event, 'car')"/>
+
+        <label for="dni">Dni: </label>
+        <input type="text" name="dni" id="dni" onkeypress="return permite(event, 'num')"/>
+
+        <label for="tlf">Teléfono: </label>
+        <input type="text" name="tlf" id="tlf" onkeypress="return permite(event, 'num')"/>
+
+        <label for="email">Email: </label>
+        <input type="text" name="email" id="email" onkeypress="return permite(event, 'car')"/>
+
+    </form> -->
+</body>
+
+</html>

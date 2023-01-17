@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            border: 1px double black;
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+        }
+
+        form label {
+            margin: 10px;
+        }
+
+        form input {
+            margin: 10px;
+            width: 20rem;
+        }
+
+        form button {
+            width: 5rem;
+            margin: auto;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+    <script>
+        for (let i = 0; i < document.getElementsByClassName("requerido").length; i++) {
+
+            document.getElementsByClassName("requerido")[i].addEventListener("onchange"), function () {
+                
+                while (this.value.length < 1) {
+                    this.style.border = "4px solid red";
+                    return false;
+                };
+    
+                this.style.border = "4px solid green";
+    
+                return true;
+            };
+        };
+
+        function checkName(elemento) {
+            elmt = document.getElementById(elemento);
+            while ((elmt.length < 1) || (/\d/.test(elmt))) {
+                elmt = prompt("Introduce tu nombre correctamente");
+                elmt.style.border = "1px solid red";
+                return false;
+            };
+            return true;
+        };
+
+        function checkDni(elemento) {
+             while ((elemento.length < 9) || (!/\d{8}\D{1}$/.test(elemento))) {
+                elemento = prompt("Introduce tu dni correctamente");
+                    return false;
+             }
+                return true;
+        }
+
+        function checkTlf(elemento) {
+            while ((elemento.length < 9) || (!/\d{9}$/.test(elemento))) {
+                elemento = prompt("Introduce tu teléfono correctamente");
+                return false;
+            }
+            return true;
+        }
+
+        function checkEmail(elemento) {
+            while ((elemento.length < 1) || (!/\w+@\w+\.\w{2,3}$/.test(elemento))) {
+                elemento = prompt("Introduce tu email correctamente");
+                return false;
+            }
+            return true;
+        }
+
+        function submit() {
+            if (checkName(document.getElementById("name").value) && checkName(document.getElementById("surname").value) && checkDni(document.getElementById("dni").value) && checkTlf(document.getElementById("tlf").value) && checkEmail(document.getElementById("email").value)) {
+                alert("Formulario enviado correctamente");
+            } else {
+                alert("Formulario enviado incorrectamente");
+            }
+            document.getElementsByTagName("form")[0].submit();
+        }
+    </script>
+</head>
+<body>
+    <form action="alta.html">
+
+        <label for="name">Nombre: </label>
+        <input type="text" name="name" id="name" onchange="return checkName(this)" class="requerido"/>
+
+        <label for="surname">Apellidos: </label>
+        <input type="text" name="surname" id="surname" onchange="return checkName(this)" class="requerido" autofocus/>
+
+        <label for="dni">Dni: </label>
+        <input type="text" name="dni" id="dni" onchange="return checkDni(this)" class="requerido"/>
+
+        <label for="tlf">Teléfono: </label>
+        <input type="text" name="tlf" id="tlf" onchange="return checkTlf(this)" class="requerido"/>
+
+        <label for="email">Email: </label>
+        <input type="text" name="email" id="email" onchange="return checkEmail(this)" class="requerido"/>
+
+        <button onclick="submit()">Enviar</button>
+    </form>
+</body>
+</html>
