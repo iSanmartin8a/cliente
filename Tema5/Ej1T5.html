@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var div = document.createElement("div");
+        var text = document.createTextNode("Hola mundo");
+        div.appendChild(text);
+        document.body.appendChild(div);
+        document.body.removeChild(div);
+        var div2 = document.createElement("div");
+        var text2 = document.createTextNode("Hola mundo");
+        div2.appendChild(text2);
+        document.body.appendChild(div2);
+        div2.setAttribute("id", "div2");
+    </script>
+</body>
+</html>
