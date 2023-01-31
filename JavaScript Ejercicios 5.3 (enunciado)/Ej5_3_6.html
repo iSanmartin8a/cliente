@@ -10,20 +10,19 @@
 				var contenidos = document.getElementsByTagName("p");
 	
 				for (var i = 0; i < enlaces.length; i++) {
-					enlaces[i].setAttribute("onclick", "muestraOculta()");
+					enlaces[i].setAttribute("onclick", "muestraOculta(this)");
 					contenidos[i].style.display = "block";
 				}
-                
 			}
             
-			function muestraOculta() {
-                var content = this.previousElementSibling;
-				if (content.style.display = "block") {
+			function muestraOculta(elemento) {
+                var content = elemento.previousElementSibling;
+				if (content.style.display == "block") {
 					content.style.display = "none";
-                    this.innerHTML = "Mostrar contenidos";
+                    elemento.innerHTML = "Mostrar contenidos";
 				} else {
 					content.style.display = "block";
-					this.innerHTML = "Ocultar contenidos";
+					elemento.innerHTML = "Ocultar contenidos";
 				}
 			}
 		</script>
