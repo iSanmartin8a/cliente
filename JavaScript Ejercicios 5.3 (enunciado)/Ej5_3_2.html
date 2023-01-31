@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+
+            var form = document.createElement("form");
+            form.setAttribute("id", "form");
+
+            var label = document.createElement("label");
+            label.setAttribute("for", "nombre");
+            label.innerHTML = "Nombre: ";
+
+            var input = document.createElement("input");
+            input.setAttribute("type", "text");
+
+            var input2 = document.createElement("input");
+            input2.setAttribute("type", "button");
+
+            input2.setAttribute("value", "Añadir más cajas de texto");
+            input2.setAttribute("onclick", "addInput()");
+
+            var reinicio = document.createElement("input");
+            reinicio.setAttribute("type", "button");
+            reinicio.setAttribute("value", "Reiniciar");
+            reinicio.setAttribute("onclick", "location.reload()");
+
+            document.body.appendChild(form);
+            form.appendChild(label);
+            form.appendChild(input);
+            form.appendChild(input2);
+            form.appendChild(reinicio);
+
+            input2.style.display = "block";
+            reinicio.style.display = "block";
+
+        }
+
+        function addInput() {
+            var form = document.getElementById("form");
+            var input = document.createElement("input");
+            input.setAttribute("type", "text");
+            form.appendChild(input);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
